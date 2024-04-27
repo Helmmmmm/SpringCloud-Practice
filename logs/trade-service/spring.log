@@ -1,0 +1,88 @@
+16:14:43:963  INFO 27452 --- [main] com.hmall.trade.TradeApplication         : Starting TradeApplication using Java 11.0.15.1 on LAPTOP-0ELIPM7F with PID 27452 (E:\ProgrammingLearning\JavaCodePractice\heima-hmall-SpringCloudPractice\back-end\hmall\trade-service\target\classes started by HLM in E:\ProgrammingLearning\JavaCodePractice\heima-hmall-SpringCloudPractice\back-end\hmall)
+16:14:43:963 DEBUG 27452 --- [main] com.hmall.trade.TradeApplication         : Running with Spring Boot v2.7.12, Spring v5.3.27
+16:14:43:963  INFO 27452 --- [main] com.hmall.trade.TradeApplication         : The following 1 profile is active: "local"
+16:14:44:512  INFO 27452 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5fef5bcc-bf0f-32af-be08-a7152c28e073
+16:14:44:771  INFO 27452 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+16:14:44:771  INFO 27452 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.14] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+16:14:44:771  INFO 27452 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+16:14:44:771  INFO 27452 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [false].
+16:14:44:771  INFO 27452 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+16:14:45:817  INFO 27452 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+16:14:45:817  INFO 27452 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+16:14:45:817  INFO 27452 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+16:14:45:895  INFO 27452 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+16:14:45:895  INFO 27452 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1914 ms
+16:14:46:756  WARN 27452 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController' defined in file [E:\ProgrammingLearning\JavaCodePractice\heima-hmall-SpringCloudPractice\back-end\hmall\trade-service\target\classes\com\hmall\trade\controller\OrderController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderServiceImpl' defined in file [E:\ProgrammingLearning\JavaCodePractice\heima-hmall-SpringCloudPractice\back-end\hmall\trade-service\target\classes\com\hmall\trade\service\impl\OrderServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.hmall.api.client.ItemClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+16:14:46:757  INFO 27452 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+16:14:46:764  INFO 27452 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+16:14:46:771 ERROR 27452 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in com.hmall.trade.service.impl.OrderServiceImpl required a bean of type 'com.hmall.api.client.ItemClient' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.hmall.api.client.ItemClient' in your configuration.
+
+16:17:44:259  INFO 2252 --- [main] com.hmall.trade.TradeApplication         : Starting TradeApplication using Java 11.0.15.1 on LAPTOP-0ELIPM7F with PID 2252 (E:\ProgrammingLearning\JavaCodePractice\heima-hmall-SpringCloudPractice\back-end\hmall\trade-service\target\classes started by HLM in E:\ProgrammingLearning\JavaCodePractice\heima-hmall-SpringCloudPractice\back-end\hmall)
+16:17:44:264 DEBUG 2252 --- [main] com.hmall.trade.TradeApplication         : Running with Spring Boot v2.7.12, Spring v5.3.27
+16:17:44:264  INFO 2252 --- [main] com.hmall.trade.TradeApplication         : The following 1 profile is active: "local"
+16:17:44:851  INFO 2252 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=617ae161-926b-3012-98e4-1e472aa397d0
+16:17:45:073  INFO 2252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+16:17:45:074  INFO 2252 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.14] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+16:17:45:074  INFO 2252 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+16:17:45:074  INFO 2252 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [false].
+16:17:45:074  INFO 2252 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+16:17:46:123  INFO 2252 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+16:17:46:129  INFO 2252 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+16:17:46:129  INFO 2252 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+16:17:46:200  INFO 2252 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+16:17:46:200  INFO 2252 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1917 ms
+16:17:47:084  INFO 2252 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+16:17:47:115  INFO 2252 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'cart-service' URL not provided. Will try picking an instance via load-balancing.
+16:17:48:685  INFO 2252 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+16:17:48:702  INFO 2252 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+16:17:50:000  INFO 2252 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+16:17:50:085  INFO 2252 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 03ad0721-4c03-4230-83ab-9ef08e9d799a
+16:17:50:103  INFO 2252 --- [main] org.reflections.Reflections              : Reflections took 9 ms to scan 1 urls, producing 3 keys and 6 values 
+16:17:50:117  INFO 2252 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 4 keys and 9 values 
+16:17:50:121  INFO 2252 --- [main] org.reflections.Reflections              : Reflections took 4 ms to scan 1 urls, producing 3 keys and 10 values 
+16:17:50:126  WARN 2252 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+16:17:50:130  INFO 2252 --- [main] org.reflections.Reflections              : Reflections took 4 ms to scan 1 urls, producing 1 keys and 5 values 
+16:17:50:134  INFO 2252 --- [main] org.reflections.Reflections              : Reflections took 4 ms to scan 1 urls, producing 1 keys and 7 values 
+16:17:50:142  INFO 2252 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 2 keys and 8 values 
+16:17:50:142  WARN 2252 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+16:17:50:142  INFO 2252 --- [main] com.alibaba.nacos.common.remote.client   : [03ad0721-4c03-4230-83ab-9ef08e9d799a] RpcClient init label, labels = {module=naming, source=sdk}
+16:17:50:142  INFO 2252 --- [main] com.alibaba.nacos.common.remote.client   : [03ad0721-4c03-4230-83ab-9ef08e9d799a] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+16:17:50:142  INFO 2252 --- [main] com.alibaba.nacos.common.remote.client   : [03ad0721-4c03-4230-83ab-9ef08e9d799a] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+16:17:50:142  INFO 2252 --- [main] com.alibaba.nacos.common.remote.client   : [03ad0721-4c03-4230-83ab-9ef08e9d799a] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+16:17:50:142  INFO 2252 --- [main] com.alibaba.nacos.common.remote.client   : [03ad0721-4c03-4230-83ab-9ef08e9d799a] Try to connect to server on start up, server: {serverIp = '192.168.200.129', server main port = 8848}
+16:17:51:138  INFO 2252 --- [main] com.alibaba.nacos.common.remote.client   : [03ad0721-4c03-4230-83ab-9ef08e9d799a] Success to connect to server [192.168.200.129:8848] on start up, connectionId = 1714130810537_192.168.200.1_1635
+16:17:51:139  INFO 2252 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [03ad0721-4c03-4230-83ab-9ef08e9d799a] Notify connected event to listeners.
+16:17:51:140  INFO 2252 --- [main] com.alibaba.nacos.common.remote.client   : [03ad0721-4c03-4230-83ab-9ef08e9d799a] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+16:17:51:141  INFO 2252 --- [main] com.alibaba.nacos.common.remote.client   : [03ad0721-4c03-4230-83ab-9ef08e9d799a] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$975/0x00000008006fcc40
+16:17:51:179  INFO 2252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+16:17:51:187  INFO 2252 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP trade-service 192.168.200.1:8085 register finished
+16:17:51:699  INFO 2252 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [03ad0721-4c03-4230-83ab-9ef08e9d799a] Receive server push request, request = NotifySubscriberRequest, requestId = 38
+16:17:51:704  INFO 2252 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [03ad0721-4c03-4230-83ab-9ef08e9d799a] Ack server push request, request = NotifySubscriberRequest, requestId = 38
+16:17:52:449  INFO 2252 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+16:17:52:449  INFO 2252 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+16:17:52:450  INFO 2252 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+16:17:52:464  INFO 2252 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+16:17:52:509  INFO 2252 --- [main] com.hmall.trade.TradeApplication         : Started TradeApplication in 9.892 seconds (JVM running for 10.557)
+16:17:57:650  INFO 2252 --- [http-nio-8085-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:17:57:650  INFO 2252 --- [http-nio-8085-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+16:17:57:651  INFO 2252 --- [http-nio-8085-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+16:18:15:676  INFO 2252 --- [http-nio-8085-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+16:18:15:850  INFO 2252 --- [http-nio-8085-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+16:18:15:854 DEBUG 2252 --- [http-nio-8085-exec-8] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+16:18:15:866 DEBUG 2252 --- [http-nio-8085-exec-8] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1654779387523936258(Long)
+16:18:15:901 DEBUG 2252 --- [http-nio-8085-exec-8] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
