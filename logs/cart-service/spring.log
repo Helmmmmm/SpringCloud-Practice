@@ -600,3 +600,48 @@ Consider defining a bean of type 'org.springframework.web.client.RestTemplate' i
 13:50:52:234  INFO 31736 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
 13:50:52:248  INFO 31736 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
 13:50:52:297  INFO 31736 --- [main] com.hmall.cart.CartApplication           : Started CartApplication in 10.084 seconds (JVM running for 10.72)
+14:12:58:310  WARN 31736 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+14:12:58:310  WARN 31736 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+14:12:58:311  WARN 31736 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+14:12:58:311  WARN 31736 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+14:12:58:819  INFO 31736 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+14:12:58:831  INFO 31736 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+14:12:59:160  INFO 31736 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+14:12:59:160  INFO 31736 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@3b905e44[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+14:12:59:160  INFO 31736 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1714121255104_192.168.200.1_34900
+14:12:59:163  INFO 31736 --- [nacos-grpc-client-executor-283] c.a.n.c.remote.client.grpc.GrpcClient    : [1714121255104_192.168.200.1_34900]Ignore complete event,isRunning:false,isAbandon=false
+14:12:59:164  INFO 31736 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@1e99c34f[Running, pool size = 5, active threads = 0, queued tasks = 0, completed tasks = 284]
+14:13:07:643  INFO 15908 --- [main] com.hmall.cart.CartApplication           : Starting CartApplication using Java 11.0.15.1 on LAPTOP-0ELIPM7F with PID 15908 (E:\ProgrammingLearning\JavaCodePractice\heima-hmall-SpringCloudPractice\back-end\hmall\cart-service\target\classes started by HLM in E:\ProgrammingLearning\JavaCodePractice\heima-hmall-SpringCloudPractice\back-end\hmall)
+14:13:07:644 DEBUG 15908 --- [main] com.hmall.cart.CartApplication           : Running with Spring Boot v2.7.12, Spring v5.3.27
+14:13:07:645  INFO 15908 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
+14:13:08:200  INFO 15908 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b88f5c75-41fb-3abf-88ac-c6faf3454c83
+14:13:08:417  INFO 15908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+14:13:08:417  INFO 15908 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.14] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+14:13:08:417  INFO 15908 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+14:13:08:419  INFO 15908 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [false].
+14:13:08:419  INFO 15908 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+14:13:09:474  INFO 15908 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+14:13:09:479  INFO 15908 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+14:13:09:479  INFO 15908 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+14:13:09:552  INFO 15908 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+14:13:09:553  INFO 15908 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1891 ms
+14:13:09:583  WARN 15908 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartController' defined in file [E:\ProgrammingLearning\JavaCodePractice\heima-hmall-SpringCloudPractice\back-end\hmall\cart-service\target\classes\com\hmall\cart\controller\CartController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cartServiceImpl' defined in file [E:\ProgrammingLearning\JavaCodePractice\heima-hmall-SpringCloudPractice\back-end\hmall\cart-service\target\classes\com\hmall\cart\service\impl\CartServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.hmall.api.client.ItemClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+14:13:09:589  INFO 15908 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+14:13:09:599  INFO 15908 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+14:13:09:607 ERROR 15908 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hmall.cart.service.impl.CartServiceImpl required a bean of type 'com.hmall.api.client.ItemClient' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.hmall.api.client.ItemClient' in your configuration.
+
