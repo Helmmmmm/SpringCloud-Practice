@@ -5,6 +5,7 @@ import cn.hutool.core.util.RandomUtil;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.hmall.cart.client.ItemClient;
 import com.hmall.cart.domain.dto.CartFormDTO;
 import com.hmall.cart.domain.dto.ItemDTO;
 import com.hmall.cart.domain.po.Cart;
@@ -43,11 +44,9 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements ICartService {
 
-    private final IItemService itemService;
-
-    private final DiscoveryClient discoveryClient;
-
-    private final RestTemplate restTemplate;
+//    private final DiscoveryClient discoveryClient;
+//    private final RestTemplate restTemplate;
+    private final ItemClient itemClient;
 
     @Override
     public void addItem2Cart(CartFormDTO cartFormDTO) {
@@ -75,7 +74,8 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
     @Override
     public List<CartVO> queryMyCarts() {
         // 1.查询我的购物车列表
-        List<Cart> carts = lambdaQuery().eq(Cart::getUserId, UserContext.getUser()).list();
+//        List<Cart> carts = lambdaQuery().eq(Cart::getUserId, UserContext.getUser()).list();
+        List<Cart> carts = lambdaQuery().eq(Cart::getUserId, 1L).list();
         if (CollUtils.isEmpty(carts)) {
             return CollUtils.emptyList();
         }
@@ -95,24 +95,28 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
         Set<Long> itemIds = vos.stream().map(CartVO::getItemId).collect(Collectors.toSet());
         // 2.查询商品
         // 2.1 根据服务名称，获取服务的实例列表
-        List<ServiceInstance> instances = discoveryClient.getInstances("item-service");
-        if (CollUtil.isEmpty(instances)) { return; }
-        // 2.2 手写负载均衡，从实例列表中挑选1个实例
-        ServiceInstance instance = instances.get(RandomUtil.randomInt(instances.size()));
-        URI uri = instance.getUri();
+//        List<ServiceInstance> instances = discoveryClient.getInstances("item-service");
+//        if (CollUtil.isEmpty(instances)) { return; }
+//        // 2.2 手写负载均衡，从实例列表中挑选1个实例
+//        ServiceInstance instance = instances.get(RandomUtil.randomInt(instances.size()));
+//        URI uri = instance.getUri();
+//
+//        ResponseEntity<List<ItemDTO>> response = restTemplate.exchange(
+//                uri + "/items?ids={ids}",
+//                HttpMethod.GET,
+//                null,
+//                new ParameterizedTypeReference<List<ItemDTO>>() {},
+//                Map.of("ids", CollUtil.join(itemIds, ","))
+//        );
+//
+//        if (!response.getStatusCode().is2xxSuccessful()) {
+//            return; // 查询失败
+//        }
+//
+//        List<ItemDTO> items = response.getBody();
 
-        ResponseEntity<List<ItemDTO>> response = restTemplate.exchange(
-                uri + "/items?ids={ids}",
-                HttpMethod.GET,
-                null,
-                new ParameterizedTypeReference<List<ItemDTO>>() {
-                },
-                Map.of("ids", CollUtil.join(itemIds, ","))
-        );
+        List<ItemDTO> items = itemClient.queryItemByIds(itemIds);
 
-        if (!response.getStatusCode().is2xxSuccessful()) { return; }
-
-        List<ItemDTO> items = itemService.queryItemByIds(itemIds);
         if (CollUtils.isEmpty(items)) {
             return;
         }
