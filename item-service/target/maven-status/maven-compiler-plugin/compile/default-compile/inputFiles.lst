@@ -1,0 +1,10 @@
+E:\ProgrammingLearning\JavaCodePractice\heima-hmall-SpringCloudPractice\back-end\hmall\item-service\src\main\java\com\hmall\item\domain\query\ItemPageQuery.java
+E:\ProgrammingLearning\JavaCodePractice\heima-hmall-SpringCloudPractice\back-end\hmall\item-service\src\main\java\com\hmall\item\service\IItemService.java
+E:\ProgrammingLearning\JavaCodePractice\heima-hmall-SpringCloudPractice\back-end\hmall\item-service\src\main\java\com\hmall\item\controller\ItemController.java
+E:\ProgrammingLearning\JavaCodePractice\heima-hmall-SpringCloudPractice\back-end\hmall\item-service\src\main\java\com\hmall\item\controller\SearchController.java
+E:\ProgrammingLearning\JavaCodePractice\heima-hmall-SpringCloudPractice\back-end\hmall\item-service\src\main\java\com\hmall\item\domain\dto\ItemDTO.java
+E:\ProgrammingLearning\JavaCodePractice\heima-hmall-SpringCloudPractice\back-end\hmall\item-service\src\main\java\com\hmall\item\mapper\ItemMapper.java
+E:\ProgrammingLearning\JavaCodePractice\heima-hmall-SpringCloudPractice\back-end\hmall\item-service\src\main\java\com\hmall\item\ItemApplication.java
+E:\ProgrammingLearning\JavaCodePractice\heima-hmall-SpringCloudPractice\back-end\hmall\item-service\src\main\java\com\hmall\item\domain\po\Item.java
+E:\ProgrammingLearning\JavaCodePractice\heima-hmall-SpringCloudPractice\back-end\hmall\item-service\src\main\java\com\hmall\item\service\impl\ItemServiceImpl.java
+E:\ProgrammingLearning\JavaCodePractice\heima-hmall-SpringCloudPractice\back-end\hmall\item-service\src\main\java\com\hmall\item\domain\dto\OrderDetailDTO.java
